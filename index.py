@@ -57,14 +57,14 @@ for index, column in df.iteritems():
             menorMes[0] = index
             menorMes[1] = som
 
-        ocupacao.append(rent/500)
+        ocupacao.append(rent/499)
 
 
-print(f'- O Maior faturamento foi do ID \033[30:42m{maior[0]}\033[m em um total de \033[4mR${maior[1]:.2F}\033[m')
+print(f'- O Maior faturamento foi do ID \033[30:42m{maior[0]}\033[m em um total de \033[4mR${maior[1]:.2f}\033[m')
 
 print()
 
-print(f'- O Menor faturamento foi do ID \033[30:41m{menor[0][0]}\033[m em um total de \033[4mR${menor[1]:.2F}\033[m')
+print(f'- O Menor faturamento foi do ID \033[30:41m{menor[0][0]}\033[m em um total de \033[4mR${menor[1]:.2f}\033[m')
 print(f'\033[m{"":<4}Entretanto os seguintes IDs obtiveram o mesmo faturamento(R$0.00):')
 for c in menor[0]:
     if c != menor[0][0]:
@@ -78,10 +78,10 @@ for c in media:
 
 print()
 
-print(f'- O Melhor mês foi \033[30:42m{maiorMes[0].strftime("%B")}\033[m com \033[4mR${maiorMes[1]:.2f}\033[m de faturamento')
-print(f'- O Pior mês foi \033[30:41m{menorMes[0].strftime("%B")}\033[m com \033[4mR${menorMes[1]:.2f}\033[m de faturamento')
+print(f'- O Melhor mês foi \033[30:42m{maiorMes[0].strftime("%B")}\033[m de 2020 com \033[4mR${maiorMes[1]/499:.2f}\033[m de faturamento médio')
+print(f'- O Pior mês foi \033[30:41m{menorMes[0].strftime("%B")}\033[m de 2019 com \033[4mR${menorMes[1]/499:.2f}\033[m de faturamento médio')
 
 print()
 
-print(f'- A taxa de ocupação de \033[30:42mJaneiro\033[m de 2020 foi de \033[4m{ocupacao[5]*100:.1f}%\033[m')
-print(f'- A taxa de ocupação de \033[30:41mOutubro\033[m de 2019 foi de \033[4m{ocupacao[2]*100:.1f}%\033[m')
+print(f'- A média da taxa de ocupação de \033[30:42mjaneiro\033[m de 2020 foi de \033[4m{ocupacao[5]*100:.2f}%\033[m')
+print(f'- A média da taxa de ocupação de \033[30:41moutubro\033[m de 2019 foi de \033[4m{ocupacao[2]*100:.2f}%\033[m')
