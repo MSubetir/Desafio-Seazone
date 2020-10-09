@@ -6,7 +6,6 @@ try:
 except:
     locale.setlocale(locale.LC_ALL, 'Portuguese_Brazil')
 
-
 file = "mensal-data.xlsx"
 df = pd.read_excel(file, sheet_name = "Planilha1",)
 
